@@ -24,6 +24,13 @@ docs/                # Hardware guide, demo GIFs, PID packs, API notes
 tests/               # (reserved for future shared test fixtures)
 ```
 
+### Detailed documentation set
+- [`docs/components.md`](docs/components.md): module-by-module component map plus responsibilities.
+- [`docs/interfaces.md`](docs/interfaces.md): contracts for adapters, repositories, view models, UI components, and navigation.
+- [`docs/developer-guide.md`](docs/developer-guide.md): extending dashboards, importing PIDs, adding transports, debugging.
+- [`docs/hardware-testing.md`](docs/hardware-testing.md): safety-first hardware verification plan for cars/bikes.
+- [`docs/pids/base_pack.json`](docs/pids/base_pack.json): starter PID pack combining global + India-focused sensors.
+
 ## Requirements
 - Android Studio Ladybug | 2024.2.1+, JDK 17
 - Android SDK 23–35, NDK (optional)
@@ -58,6 +65,7 @@ tests/               # (reserved for future shared test fixtures)
 
 ## Developer notes
 - Design decisions, extension points, and roadmap live in `IMPLEMENTATION.md`.
+- Architecture & contract breakdowns are collected in `docs/components.md` and `docs/interfaces.md`.
 - Raw OBD console lives in Settings; plugin/AIDL hooks can subscribe to `ObdConnectionManager.telemetry()` Flow for reuse by partner apps.
 - Logs encrypt by default (XOR seed placeholder) and respect the Settings toggle.
 
