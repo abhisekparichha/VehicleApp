@@ -1,0 +1,23 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ main, develop, '*' ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - name: Grant execute permission
+        run: chmod +x gradlew
+      - name: Cache Gradle
+        uses: gradle/actions/setup-gradle@v3
+      - name: Run checks
+        run: ./gradlew lint ktlintCheckAll detekt test assembleDebug
