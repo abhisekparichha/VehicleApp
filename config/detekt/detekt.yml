@@ -1,0 +1,13 @@
+build:
+  maxIssues: 0
+  excludeCorrectable: false
+style:
+  MagicNumber:
+    active: false
+  MagicString:
+    active: false
+  WildcardImport:
+    active: false
+complexity:
+  LongMethod:
+    threshold: 120

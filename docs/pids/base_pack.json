@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "region": "india",
+  "pids": [
+    {
+      "mode": "01",
+      "pid": "14",
+      "bytes": 2,
+      "expression": "((A*256)+B)/100",
+      "unit": "V",
+      "min": 0,
+      "max": 20,
+      "description": "O2 Sensor Bank 1 Sensor 1"
+    },
+    {
+      "mode": "01",
+      "pid": "5E",
+      "bytes": 2,
+      "expression": "((A*256)+B)/4",
+      "unit": "g/s",
+      "min": 0,
+      "max": 400,
+      "description": "Fuel Rate"
+    }
+  ]
+}

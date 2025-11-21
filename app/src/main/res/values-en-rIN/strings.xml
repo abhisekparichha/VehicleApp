@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">DriveSafe OBD</string>
+    <string name="permission_rationale">Yeh app Bluetooth aur Location ka istemal aapke gaadi ke OBD adapter se judne ke liye karta hai. Jab tak aap cloud sync ke liye haan nahi bolte, aapke data device par hi rehta hai.</string>
+    <string name="safety_notice">Suraksha ke liye, DTC clear aur actuator tests sirf tabhi chalenge jab gaadi parked ho.</string>
+    <string name="hud_notice">HUD mode screen ko mirror karta hai. Sirf parked state mein set-up karein.</string>
+</resources>

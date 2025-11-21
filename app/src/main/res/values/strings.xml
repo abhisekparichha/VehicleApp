@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">DriveSafe OBD</string>
+    <string name="permission_rationale">This app uses Bluetooth &amp; Location to connect to your vehicle’s OBD adapter. Your data stays on device unless you opt into cloud sync.</string>
+    <string name="safety_notice">For safety, clearing codes and actuator tests can only be run when the app detects the vehicle is parked.</string>
+    <string name="hud_notice">HUD mode mirrors the screen for projection. Set it up while parked.</string>
+</resources>
