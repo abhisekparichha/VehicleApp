@@ -43,6 +43,16 @@ tests/               # (reserved for future shared test fixtures)
 ./gradlew lint ktlintCheck detekt test connectedAndroidTest
 ```
 
+### Build helper script
+
+Prefer the wrapper script for repeatable local automation:
+
+```bash
+./scripts/build_apk_and_tests.sh
+```
+
+It builds the requested APK (default `debug`), runs JVM tests, and triggers `connectedAndroidTest` when a device/emulator is online. Customize via flags such as `--variant release`, `--skip-unit-tests`, `--skip-connected-tests`, or `--no-clean`, and pass extra Gradle arguments with `GRADLE_ARGS="-Pci=true"`.
+
 1. **Mock-only smoke:** install `app-debug.apk`, launch, accept onboarding, pick the mock adapter. Live dashboard + logs will replay synthetic data immediately.
 2. **Real adapter:** pair via system Bluetooth / Wi-Fi tether, then use *Adapter Scan → Select adapter* (permission prompts shown). Send `ATI` from Settings → Raw command console to confirm `ELM327` echoed.
 3. **Driver mode:** pin Dashboard in HUD mode (Settings → HUD mirror). Only 3–6 widgets update, large numerics (72 sp) with semantic colors.
